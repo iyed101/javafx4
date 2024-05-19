@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ControllerEtudiant">
+   <children>
+      <AnchorPane layoutX="52.0" layoutY="73.0" prefHeight="217.0" prefWidth="498.0" style="-fx-border-color: black; -fx-border-radius: 15;">
+         <children>
+            <Text layoutX="35.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :" wrappingWidth="52.5367431640625">
+               <font>
+                  <Font name="Poppins Medium" size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="35.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom :" wrappingWidth="61.336761474609375">
+               <font>
+                  <Font name="Poppins Medium" size="13.0" />
+               </font>
+            </Text>
+            <TextField fx:id="nomTextField" layoutX="117.0" layoutY="58.0" />
+            <TextField fx:id="prenomTextField" layoutX="117.0" layoutY="134.0" />
+            <Text layoutX="279.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sexe :" wrappingWidth="52.5367431640625">
+               <font>
+                  <Font name="Poppins Medium" size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="279.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filiere:" wrappingWidth="52.5367431640625">
+               <font>
+                  <Font name="Poppins Medium" size="13.0" />
+               </font>
+            </Text>
+            <RadioButton fx:id="sexeRadioButtonF" layoutX="332.0" layoutY="62.0" mnemonicParsing="false" text="F">
+               <font>
+                  <Font name="Poppins Light" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="sexeRadioButtonM" layoutX="387.0" layoutY="61.0" mnemonicParsing="false" text="M">
+               <font>
+                  <Font name="Poppins Light" size="13.0" />
+               </font>
+            </RadioButton>
+            <ChoiceBox fx:id="filiereChoiceBox" layoutX="329.0" layoutY="133.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="40.0" layoutY="309.0" prefHeight="266.0" prefWidth="714.0" style="-fx-border-color: black; -fx-border-radius: 15;">
+         <children>
+            <TableView fx:id="etudiantTableView" layoutX="14.0" layoutY="14.0" prefHeight="238.0" prefWidth="681.0">
+               <columns>
+                  <TableColumn fx:id="nomColumn" prefWidth="150.0" text="Nom" />
+                  <TableColumn fx:id="prenomColumn" prefWidth="150.0" text="Prenom" />
+                  <TableColumn fx:id="sexeColumn" prefWidth="150.0" text="Sexe" />
+                  <TableColumn fx:id="filiereColumn" prefWidth="150.0" text="Filiere" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Button layoutX="577.0" layoutY="82.0" mnemonicParsing="false" onAction="#ajouterEtudiant" text="Ajouter" />
+      <Button layoutX="574.0" layoutY="169.0" mnemonicParsing="false" onAction="#modifierEtudiant" text="Modifier" />
+      <Button layoutX="569.0" layoutY="265.0" mnemonicParsing="false" onAction="#supprimerEtudiant" text="Supprimer" />
+   </children>
+</AnchorPane>
